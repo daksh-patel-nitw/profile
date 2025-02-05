@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Page Loading</title>
+    <script>
+        function checkInternetSpeed() {
+            if ('connection' in navigator) {
+                const speed = navigator.connection.downlink; // Speed in Mbps
+                console.log("Internet speed:", speed, "Mbps");
+
+                if (speed < 2) { // If speed is less than 2 Mbps, load lightweight version
+                    window.location.href = "lightweight.html";
+                } else {
+                    window.location.href = "full.html";
+                }
+            } else {
+                console.log("Network Information API not supported. Defaulting to full version.");
+                window.location.href = "full.html";
+            }
+        }
+
+        window.onload = checkInternetSpeed;
+    </script>
+</head>
+<body>
+    <p>Checking your internet speed...</p>
+</body>
+</html>
