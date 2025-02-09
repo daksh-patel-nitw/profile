@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Daksh Patel</title>
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css">
 
 </head>
@@ -23,7 +23,7 @@
             <a href="#services">Projects</a>
             <a href="#contact">Contact</a>
             <a href="./files/Daksh_Patel_Resume_21_1_2025.pdf" download="Daksh_Patel_Resume.pdf"
-                target="_blank">Resume</a>
+                target="_blank" id="download-resume-link">Resume</a>
         </nav>
     </header>
 
@@ -32,7 +32,7 @@
             <h1>Hi, It's <span class="highlight">Daksh</span></h1>
 
 
-            <h3 class="text-animation">I am <span></span></h3>
+            <h3 class="text-animation">I am a <span></span></h3>
 
 
 
@@ -45,18 +45,17 @@
                 <a href="https://www.linkedin.com/in/daksh-patel-nitw/" target="_blank"><i
                         class='bx bxl-linkedin'></i></a>
                 <a href="https://github.com/daksh-patel-nitw" target="_blank"><i class='bx bxl-github'></i></a>
-
-
-
             </div>
+
             <div class="btn-grp">
                 <a href="./files/Daksh_Patel_Resume_21_1_2025.pdf" download="Daksh_Patel_Resume.pdf" target="_blank"
                     class="btn">Resume</a>
             </div>
+
         </div>
 
         <div class="home-img">
-            <img src="./profileImg.jpg" alt="Profile Image">
+            <img src="./files/profileImg.jpg" alt="Profile Image">
         </div>
 
     </section>
@@ -94,7 +93,10 @@
                     <p>Company: BISAG-N <br>
                         Location: Gandhinagar <br>
                         Outputs: <br>
-                        Developed a Healthcare Management System that optimized administrative efficiency, improved patient satisfaction, and helped in inventory management. Implemented features that reduced patient wait times by 40%, increased prescription accuracy, and decreased inventory wastage by 30% through real-time monitoring.
+                        Developed a Healthcare Management System that optimized administrative efficiency, improved
+                        patient satisfaction, and helped in inventory management. Implemented features that reduced
+                        patient wait times by 40%, increased prescription accuracy, and decreased inventory wastage by
+                        30% through real-time monitoring.
                     </p>
                 </div>
             </div>
@@ -109,7 +111,7 @@
                 </div>
             </div>
 
-            
+
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
@@ -130,31 +132,89 @@
         <h2 class="heading">Projects</h2>
 
         <div class="services-container">
-            <div class="service-box">
-                <div class="service-info">
-                    <h3>UI Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil a similique itaque
-                        veritatis? Sint temporibus rem atque voluptatibus ad soluta aut ipsam iusto fugiat?</p>
-                </div>
 
-            </div>
+            <!-- Real-Time Stock Market Data Engineering -->
             <div class="service-box">
-                <div class="service-info">
-                    <h3>UI Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil a similique itaque
-                        veritatis? Sint temporibus rem atque voluptatibus ad soluta aut ipsam iusto fugiat?</p>
+                <div class="service-info front">
+                    <h3>Stock Market Data Engineering</h3>
+                    <h4>Python, Apache Kafka, AWS</h4>
+                    <p>Real-time stock data streaming with Kafka, AWS Glue for data cataloging, and Athena for efficient
+                        querying.</p>
                 </div>
-
-            </div>
-            <div class="service-box">
-                <div class="service-info">
-                    <h3>UI Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil a similique itaque
-                        veritatis? Sint temporibus rem atque voluptatibus ad soluta aut ipsam iusto fugiat?</p>
+                <div class="service-info back">
+                    <a href="https://github.com/daksh-patel-nitw/stock_market_data_engineering" target="_blank"><i class='bx bxl-github'></i></a>
+                    <h3>View Code</h3>
                 </div>
-
             </div>
 
+            <!-- WeatherGuard -->
+            <div class="service-box">
+                <div class="service-info front">
+                    <h3>WeatherGuard</h3>
+                    <h4>Python, MySQL</h4>
+                    <p>Secure weather data fetching with encrypted login, API rate limiting, and log management.</p>
+                </div>
+                <div class="service-info back">
+                    <a href="https://github.com/daksh-patel-nitw/WeatherTracker" target="_blank"><i class='bx bxl-github'></i></a>
+                    <h3>View Code</h3>
+                </div>
+            </div>
+
+            <!-- SmartFarming -->
+            <div class="service-box">
+                <div class="service-info front">
+                    <h3>SmartFarming</h3>
+                    <h4>Contiki-ng, Hyperledger, Flask, Node.js, React</h4>
+                    <p>IoT-enabled intelligent irrigation and aquaculture system with real-time monitoring and
+                        blockchain-based data storage.</p>
+                </div>
+                <div class="service-info back">
+                    <a href="https://github.com/daksh-patel-nitw/Smart-Farming-IOT" target="_blank"><i class='bx bxl-github'></i></a>
+                    <h3>View Code</h3>
+                </div>
+            </div>
+            <!-- c++ Stock Management -->
+            <div class="service-box">
+                <div class="service-info front">
+                    <h3>Stock Management System</h3>
+                    <h4>C++</h4>
+                    <p>A menu-based application that allows users to view stocks, buy and sell stocks, register accounts, and manage their portfolio. Data is stored in files for persistence.</p>
+                </div>
+            
+                <div class="service-info back">
+                    <a href="https://github.com/daksh-patel-nitw/c-_stock_management_system" target="_blank"><i class='bx bxl-github'></i></a>
+                    <h3>View Code</h3>
+                </div>
+            </div>
+
+            
+            <!-- YouTube Downloader -->
+            <div class="service-box">
+                <div class="service-info front">
+                    <h3>YTube Downloader</h3>
+                    <h4>Python, Tkinter</h4>
+                    <p>One-click tool for downloading YouTube playlists and videos efficiently with checkboxes for
+                        selection.</p>
+                </div>
+                <div class="service-info back">
+                    <a href="https://github.com/daksh-patel-nitw/youtube-playlist-downloader" target="_blank"><i class='bx bxl-github'></i></a>
+                    <h3>View Code</h3>
+                </div>
+            </div>
+
+            <!-- BERT Project  -->
+            <div class="service-box">
+                <div class="service-info front">
+                    <h3>Enhanced BERT Transformer Model </h3>
+                    <h4>Python, PyTorch, Google Colab</h4>
+                    <p>Improved the execution speed of BERT by modifying its attention mechanism to enhance efficiency and reduce computational load.</p>
+                </div>
+                <div class="service-info back">
+                    <a href="https://github.com/daksh-patel-nitw/enhanced_bert_Transformer" target="_blank"><i class='bx bxl-github'></i></a>
+                    <h3>View Code</h3>
+                </div>
+            </div>
+            
 
         </div>
     </section>
@@ -163,7 +223,7 @@
         <h2 class="heading">Contact <span class="highlight">Me</span></h2>
 
 
-        <form class="contact-form" action="https://formsubmit.co/daksh.patel.nitw@email.com" method="POST">
+        <form class="contact-form" action="https://formsubmit.co/daksh.patel.nitw@gmail.com" method="POST">
             <div class="input-group">
                 <div class="input-box">
                     <input type="text" placeholder="Full Name" required>
@@ -184,7 +244,7 @@
     </section>
 
 
-    <script src="./script.js"></script>
+    <script src="./javascript/script.js"></script>
 </body>
 
 </html>
