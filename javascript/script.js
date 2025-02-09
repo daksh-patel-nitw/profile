@@ -58,17 +58,21 @@ darkTheme.onclick = () =>{
  }
 
 
+
  document.addEventListener("DOMContentLoaded", () => {
+
     const sections = document.querySelectorAll("section");
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+
                 // Apply fadeInRight animation to all sections when they are in view
                 entry.target.style.animation = "fadeInRight 0.8s ease-out forwards";
             } else {
                 // Apply fadeOutLeft animation when sections are out of view
                 entry.target.style.animation = "fadeOutLeft 0.8s ease-out forwards";
+
             }
         });
     }, { threshold: 0.2 });

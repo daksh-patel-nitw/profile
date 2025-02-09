@@ -76,6 +76,7 @@ html {
     scrollbar-width: none;
     font-size: 60%;
     overflow-x: hidden;
+
     scroll-snap-type: y mandatory;
 }
 
@@ -133,6 +134,7 @@ section {
     padding: 10rem 12%;
     scroll-snap-align: start;
     opacity: 0;
+
     transition: transform 0.5s ease-in-out;
 }
 
@@ -145,6 +147,7 @@ section {
     }
     to {
         opacity: 1;
+
         transform: translateX(-60);
     }
 }
@@ -461,6 +464,7 @@ section {
     margin-bottom: 40px;
     width: 100%;
     position: relative;
+
     opacity: 0;
     transition: all 0.5s ease-in-out;
 }
@@ -493,6 +497,7 @@ section {
 }
 
 .timeline-item:nth-child(even) {
+
     padding-right: calc(50% + 30px);
     
 }
@@ -500,6 +505,7 @@ section {
 .timeline-item:nth-child(odd) {
     padding-left: calc(50% + 30px);
 }
+
 
 .timeline-dot {
     height: 21px;
@@ -739,6 +745,7 @@ section {
 
     .timeline-item:nth-child(even) {
         padding-right: 0;
+
     }
 
     .timeline-item:nth-child(odd),
@@ -771,7 +778,9 @@ section {
 @media(max-width:895px) {
     #menu-icon {
         display: block;
+
         margin-right: 1rem;
+
         color: var(--text-color);
     }
 
