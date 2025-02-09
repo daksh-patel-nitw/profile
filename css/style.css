@@ -1,49 +1,11 @@
-/* blue */
-/* .dark-mode {
-    --bg-color: #080808;
-    --second-bg-color: #131313;
-    --text-color: white;
-    --main-color: #1fc7ff;
-}  */
-/* :root {
-   
-
-    --bg-color: #ffffff;
-    --second-bg-color: #E9F1FA;
-    --text-color: rgb(0, 0, 0);
-    --main-color: #00ABE4;
-    
-} */
-
-/* --------------------- Red ----------------------------- */
-
-/* Root Variables */
-/* .dark-mode {
-    --bg-color: #080808;
-    --second-bg-color: #131313;
-    --text-color: white;
-    --main-color: #ec0202;
-}  */
-
-/* :root {
-   
-
-    --bg-color: #ffffff;
-    --second-bg-color: #e8e8e8;
-    --text-color: rgb(0, 0, 0);
-    --main-color: #EF5350;
-    
-} */
-
-/* ------------------------------------------------------------- */
-.dark-mode {
+:root{
     --bg-color: #080808;
     --second-bg-color: #131313;
     --text-color: white;
     --main-color: #FF3B30;
 }
 
-:root {
+.dark-mode{
 
 
     --bg-color: #FFFFFF;
@@ -140,6 +102,14 @@ section {
 
 
 
+.fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
 @keyframes fadeInRight {
     from {
         opacity: 0;
@@ -147,19 +117,7 @@ section {
     }
     to {
         opacity: 1;
-
-        transform: translateX(-60);
-    }
-}
-
-@keyframes fadeOutLeft {
-    from {
-        opacity: 1;
         transform: translateX(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(-60px);
     }
 }
 
@@ -171,17 +129,6 @@ section {
     to {
         opacity: 1;
         transform: translateX(0);
-    }
-}
-
-@keyframes fadeOutRight {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(60px);
     }
 }
 
@@ -234,10 +181,9 @@ section {
     top: 3rem;
     width: 32vw;
     border-radius: 50%;
-    /* overflow: hidden; */
+    overflow: hidden;
     cursor: pointer;
     box-shadow: 0 0 25px var(--main-color);
-
     animation: hoverEffect 3s ease-out infinite;
 }
 
@@ -464,7 +410,8 @@ section {
     margin-bottom: 40px;
     width: 100%;
     position: relative;
-
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     transition: all 0.5s ease-in-out;
 }
@@ -499,7 +446,7 @@ section {
 .timeline-item:nth-child(even) {
 
     padding-right: calc(50% + 30px);
-    
+    align-items: flex-end;
 }
 
 .timeline-item:nth-child(odd) {
@@ -745,7 +692,7 @@ section {
 
     .timeline-item:nth-child(even) {
         padding-right: 0;
-
+        align-items: first baseline;
     }
 
     .timeline-item:nth-child(odd),

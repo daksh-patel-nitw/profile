@@ -51,9 +51,9 @@ darkTheme.onclick = () =>{
     document.body.classList.toggle("dark-mode");
     
     if (document.body.classList.contains("dark-mode")) {
-        darkTheme.innerHTML = 'Light <span class="highlight">Theme</span>';
+        darkTheme.innerHTML = 'Dark <span class="highlight">Mode</span>';
     } else {
-        darkTheme.innerHTML = 'Dark <span class="highlight">Theme</span>';
+        darkTheme.innerHTML = 'Light <span class="highlight">Mode</span>';
     }
  }
 
@@ -66,12 +66,20 @@ darkTheme.onclick = () =>{
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Get index of section from NodeList
+                let index = Array.from(sections).indexOf(entry.target);
 
-                // Apply fadeInRight animation to all sections when they are in view
-                entry.target.style.animation = "fadeInRight 0.8s ease-out forwards";
+                // Apply alternating animations based on index
+                if (index % 2 === 0) {
+                    entry.target.classList.add("fade-in-right");
+                } else {
+                    entry.target.classList.add("fade-in-left");
+                }
             } else {
-                // Apply fadeOutLeft animation when sections are out of view
-                entry.target.style.animation = "fadeOutLeft 0.8s ease-out forwards";
+                // Remove animation classes when section exits the viewport
+                entry.target.classList.remove("fade-in-right", "fade-in-left");
+                entry.target.style.opacity = "0";
+                entry.target.style.transform = "translateX(0)";
 
             }
         });
