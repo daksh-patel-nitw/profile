@@ -58,7 +58,9 @@ darkTheme.onclick = () =>{
  }
 
 
+
  document.addEventListener("DOMContentLoaded", () => {
+
     const sections = document.querySelectorAll("section");
 
     const observer = new IntersectionObserver(entries => {
@@ -78,6 +80,7 @@ darkTheme.onclick = () =>{
                 entry.target.classList.remove("fade-in-right", "fade-in-left");
                 entry.target.style.opacity = "0";
                 entry.target.style.transform = "translateX(0)";
+
             }
         });
     }, { threshold: 0.2 });
