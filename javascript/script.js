@@ -58,36 +58,28 @@ darkTheme.onclick = () =>{
  }
 
 
-document.addEventListener("DOMContentLoaded", () => {
+
+ document.addEventListener("DOMContentLoaded", () => {
+
     const sections = document.querySelectorAll("section");
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Get index of section from NodeList
-                let index = Array.from(sections).indexOf(entry.target);
 
-                // Apply alternating animations based on index
-                if (index % 2 === 0) {
-                    entry.target.style.animation = "fadeInRight 0.8s ease-out forwards";
-                } else {
-                    entry.target.style.animation = "fadeInLeft 0.8s ease-out forwards";
-                }
+                // Apply fadeInRight animation to all sections when they are in view
+                entry.target.style.animation = "fadeInRight 0.8s ease-out forwards";
             } else {
-                let index = Array.from(sections).indexOf(entry.target);
+                // Apply fadeOutLeft animation when sections are out of view
+                entry.target.style.animation = "fadeOutLeft 0.8s ease-out forwards";
 
-                // Reverse animation on exit
-                if (index % 2 === 0) {
-                    entry.target.style.animation = "fadeOutLeft 0.8s ease-out forwards";
-                } else {
-                    entry.target.style.animation = "fadeOutRight 0.8s ease-out forwards";
-                }
             }
         });
     }, { threshold: 0.2 });
 
     sections.forEach(section => observer.observe(section));
 });
+
 
 
 
